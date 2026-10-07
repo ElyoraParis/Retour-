@@ -1,168 +1,1350 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Retour : le rappel qui fait revenir vos clientes</title>
-<meta name="description" content="Vos clientes ont fini leur bougie. Elles ne pensent pas à en racheter. Retour le leur rappelle à votre place. 25 €/mois, satisfait ou remboursé 30 jours.">
-<meta property="og:title" content="Retour : le rappel qui fait revenir vos clientes">
-<meta property="og:description" content="Vos clientes ont fini leur bougie. Retour le leur rappelle à votre place.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Élyora Paris — Home & Sensory</title>
+<meta name="description" content="Découvrez l'univers Élyora Paris : bougies, parfums d'intérieur, diffuseurs et créations sensorielles.">
+
 <style>
-:root{--fond:#F8F0E9;--rose:#EFD3CC;--encre:#3B2B28;--accent:#A55F5C;--or:#B8955A;--blanc:#FFFBF8;--ligne:#E6D3C9}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
-.c{max-width:640px;margin:0 auto;padding:0 20px}
-h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:700;line-height:1.18}
-h1{font-size:2rem;margin:18px 0 14px}
-h2{font-size:1.5rem;margin:52px 0 14px;text-align:center}
-h2:after{content:"";display:block;width:44px;height:2px;background:var(--or);margin:12px auto 0}
-.haut{background:var(--blanc);border-bottom:1px solid var(--ligne);text-align:center;padding:16px 0}
-.logo{font-family:Georgia,serif;font-weight:700;letter-spacing:.32em;font-size:1.05rem}
-.logo span{color:var(--accent)}
-.hero{background:linear-gradient(var(--rose),var(--fond));padding:30px 0 10px;text-align:center}
-.sur{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0}
-.btn{display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:18px 20px;border-radius:999px;font-size:1.08rem;box-shadow:0 6px 18px rgba(165,95,92,.28)}
-.petit{font-size:.88rem;opacity:.85;text-align:center;margin:10px 0 0}
-.bougies{display:block;width:100%;max-width:360px;margin:22px auto 0}
-.tel{width:270px;max-width:100%;margin:0 auto;background:var(--blanc);border:7px solid #E5CFC6;border-radius:34px;padding:16px 14px 18px;box-shadow:0 14px 30px rgba(59,43,40,.12)}
-.tel small{display:block;text-align:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#8a7068;margin-bottom:10px}
-.bulle{background:var(--rose);border-radius:18px 18px 18px 4px;padding:12px 14px;font-size:.92rem;line-height:1.45;text-align:left}
-.ex{text-align:center;font-size:.82rem;opacity:.75;margin:12px 0 0}
-.carte{background:var(--blanc);border:1px solid var(--ligne);border-radius:18px;padding:18px 20px;margin:12px 0}
-.num{display:inline-block;width:30px;height:30px;line-height:30px;text-align:center;border-radius:50%;background:var(--rose);color:var(--accent);font-family:Georgia,serif;font-weight:700;margin-right:8px}
-.carte b{font-family:Georgia,serif;font-size:1.08rem}
-.prix{font-family:Georgia,serif;font-size:2.8rem;font-weight:700;margin:0;text-align:center}
-.prix span{font-size:1rem;font-weight:400}
-.garantie{background:var(--blanc);border:2px solid var(--or);border-radius:18px;padding:18px 20px;margin:20px 0}
-details{border-bottom:1px solid var(--ligne);padding:14px 0}
-summary{font-weight:700;cursor:pointer}
-footer{padding-top:40px;padding-bottom:20px;font-size:.9rem}
-footer a{color:var(--encre);margin-right:14px}
-.legal{display:none;background:var(--blanc);border-radius:14px;padding:20px;margin:24px 0;font-size:.95rem}
-.legal:target{display:block}
-.fixe{position:fixed;left:0;right:0;bottom:0;background:var(--fond);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--ligne)}
-.fixe .btn{max-width:640px;margin:0 auto;padding:15px}
+:root{
+  --rose:#e9c8c3;
+  --rose2:#f7e7e3;
+  --creme:#faf7f2;
+  --brun:#382a27;
+  --or:#b78b58;
+  --blanc:#fff;
+  --gris:#746d69;
+  --bord:#e8dfd8;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:var(--brun);
+}
+
+button,input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* ANNONCE */
+
+.announcement{
+  background:#382a27;
+  color:#fff;
+  text-align:center;
+  padding:9px 15px;
+  font-size:12px;
+  letter-spacing:.04em;
+}
+
+/* HEADER */
+
+header{
+  background:white;
+  border-bottom:1px solid var(--bord);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+.header-main{
+  max-width:1250px;
+  margin:auto;
+  min-height:74px;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.logo{
+  min-width:180px;
+  text-align:center;
+  font-family:Georgia,serif;
+  font-size:25px;
+  letter-spacing:.20em;
+}
+
+.logo small{
+  display:block;
+  font-family:Arial,sans-serif;
+  font-size:8px;
+  letter-spacing:.35em;
+  margin-top:4px;
+}
+
+.search{
+  flex:1;
+  display:flex;
+  border:1px solid #bbb;
+  border-radius:25px;
+  overflow:hidden;
+}
+
+.search input{
+  border:0;
+  outline:0;
+  padding:12px 17px;
+  width:100%;
+}
+
+.search button{
+  border:0;
+  background:var(--brun);
+  color:#fff;
+  padding:0 25px;
+}
+
+.icons{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.cart-button{
+  border:0;
+  background:var(--rose2);
+  padding:11px 15px;
+  border-radius:25px;
+  position:relative;
+}
+
+.cart-count{
+  position:absolute;
+  top:-5px;
+  right:-4px;
+  width:19px;
+  height:19px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--brun);
+  color:#fff;
+  border-radius:50%;
+  font-size:10px;
+}
+
+/* NAV */
+
+nav{
+  border-top:1px solid #eee;
+}
+
+.nav-inner{
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  padding:13px 20px;
+  font-size:13px;
+}
+
+.nav-inner a:hover{
+  color:#b77b72;
+}
+
+/* HERO */
+
+.hero{
+  background:
+    radial-gradient(circle at 15% 50%,#f3d8d1 0,transparent 28%),
+    radial-gradient(circle at 85% 30%,#ead2c5 0,transparent 25%),
+    linear-gradient(120deg,#f9eee8,#ead2c5);
+
+  min-height:350px;
+  display:flex;
+  align-items:center;
+}
+
+.hero-inner{
+  width:100%;
+  max-width:1250px;
+  margin:auto;
+  padding:55px 30px;
+  text-align:center;
+}
+
+.hero .eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.25em;
+  font-size:11px;
+  margin-bottom:14px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:52px;
+  font-weight:400;
+  letter-spacing:.12em;
+}
+
+.hero h1 span{
+  display:block;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  letter-spacing:.4em;
+  margin-top:9px;
+}
+
+.hero p{
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:21px;
+  margin:20px auto;
+  max-width:600px;
+}
+
+.primary{
+  border:0;
+  border-radius:25px;
+  background:var(--brun);
+  color:#fff;
+  padding:14px 25px;
+  font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+  max-width:1250px;
+  margin:auto;
+  padding:45px 20px;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-head small{
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  color:#a17d70;
+  font-size:10px;
+}
+
+.section-head h2{
+  font-family:Georgia,serif;
+  font-size:30px;
+  margin-top:7px;
+  font-weight:400;
+}
+
+/* CATEGORIES */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+
+.category{
+  background:var(--creme);
+  border:1px solid var(--bord);
+  border-radius:15px;
+  overflow:hidden;
+  text-align:center;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.category:hover{
+  transform:translateY(-3px);
+}
+
+.category-img{
+  height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:46px;
+  background:linear-gradient(145deg,#f7dfd8,#efe5dc);
+}
+
+.category p{
+  padding:13px 7px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* PROMO */
+
+.promo{
+  margin:20px auto 55px;
+  max-width:1210px;
+  border-radius:20px;
+  min-height:250px;
+  background:linear-gradient(100deg,#ead0c8,#f8eee9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+}
+
+.promo h2{
+  font-family:Georgia,serif;
+  font-size:35px;
+  font-weight:400;
+}
+
+.promo p{
+  margin:12px 0 20px;
+}
+
+/* FILTER */
+
+.filters{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.filter{
+  background:white;
+  border:1px solid var(--bord);
+  border-radius:20px;
+  padding:9px 15px;
+  font-size:12px;
+}
+
+.filter.active{
+  background:var(--brun);
+  color:white;
+}
+
+/* PRODUCTS */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.product{
+  border:1px solid var(--bord);
+  border-radius:17px;
+  overflow:hidden;
+  background:white;
+  transition:.2s;
+}
+
+.product:hover{
+  box-shadow:0 10px 30px rgba(50,30,20,.08);
+  transform:translateY(-2px);
+}
+
+.product-image{
+  height:230px;
+  background:linear-gradient(145deg,#f4ddd6,#f4eee8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:70px;
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+  left:12px;
+  top:12px;
+  background:#fff;
+  padding:6px 9px;
+  border-radius:20px;
+  font-size:10px;
+}
+
+.heart{
+  position:absolute;
+  right:12px;
+  top:12px;
+  background:white;
+  border:0;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  font-size:17px;
+}
+
+.product-info{
+  padding:16px;
+}
+
+.product-type{
+  color:#9b7d73;
+  text-transform:uppercase;
+  font-size:9px;
+  letter-spacing:.12em;
+}
+
+.product h3{
+  font-family:Georgia,serif;
+  font-size:17px;
+  margin:7px 0;
+}
+
+.description{
+  font-size:12px;
+  color:var(--gris);
+  min-height:32px;
+}
+
+.price{
+  font-size:18px;
+  font-weight:bold;
+  margin:12px 0;
+}
+
+.delivery{
+  font-size:11px;
+  color:#a26b60;
+  margin-bottom:12px;
+}
+
+.add{
+  width:100%;
+  border:0;
+  background:var(--brun);
+  color:white;
+  border-radius:9px;
+  padding:12px;
+  font-weight:bold;
+}
+
+/* BENEFITS */
+
+.benefits{
+  margin-top:60px;
+  background:var(--rose2);
+}
+
+.benefits-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  padding:38px 20px;
+}
+
+.benefit{
+  text-align:center;
+}
+
+.benefit span{
+  font-size:27px;
+}
+
+.benefit strong{
+  display:block;
+  margin:8px 0 5px;
+  font-family:Georgia,serif;
+}
+
+.benefit p{
+  font-size:11px;
+  color:#74645e;
+}
+
+/* FOOTER */
+
+footer{
+  background:#302724;
+  color:#eee;
+  padding:45px 20px;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+
+.footer-logo{
+  font-family:Georgia,serif;
+  letter-spacing:.18em;
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+footer p,
+footer a{
+  font-size:12px;
+  color:#d8d0cd;
+  line-height:1.8;
+}
+
+footer h4{
+  margin-bottom:12px;
+}
+
+/* CART */
+
+.cart-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  display:none;
+  z-index:99;
+}
+
+.cart-overlay.show{
+  display:block;
+}
+
+.cart{
+  position:absolute;
+  right:0;
+  top:0;
+  width:390px;
+  max-width:100%;
+  height:100%;
+  background:white;
+  padding:22px;
+  overflow:auto;
+}
+
+.cart-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--bord);
+  padding-bottom:16px;
+}
+
+.close{
+  border:0;
+  background:none;
+  font-size:25px;
+}
+
+.cart-empty{
+  padding:70px 15px;
+  text-align:center;
+  color:#777;
+}
+
+.cart-item{
+  padding:15px 0;
+  border-bottom:1px solid #eee;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.cart-item strong{
+  font-size:13px;
+}
+
+.cart-item p{
+  font-size:12px;
+  margin-top:5px;
+}
+
+.remove{
+  border:0;
+  background:none;
+  color:#a15e55;
+  font-size:11px;
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+  font-weight:bold;
+  margin:25px 0 15px;
+}
+
+.checkout{
+  width:100%;
+  border:0;
+  background:var(--brun);
+  color:white;
+  padding:15px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .announcement{
+    font-size:10px;
+  }
+
+  .header-main{
+    min-height:auto;
+    padding:12px 14px;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .logo{
+    min-width:auto;
+    flex:1;
+    text-align:left;
+    font-size:20px;
+  }
+
+  .logo small{
+    font-size:6px;
+  }
+
+  .search{
+    order:3;
+    width:100%;
+    flex-basis:100%;
+  }
+
+  .search input{
+    padding:10px 14px;
+  }
+
+  .search button{
+    padding:0 17px;
+    font-size:11px;
+  }
+
+  .nav-inner{
+    justify-content:flex-start;
+    overflow-x:auto;
+    white-space:nowrap;
+    gap:22px;
+    padding:11px 15px;
+  }
+
+  .hero{
+    min-height:300px;
+  }
+
+  .hero-inner{
+    padding:45px 20px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .container{
+    padding:35px 15px;
+  }
+
+  .categories{
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+  }
+
+  .category-img{
+    height:90px;
+    font-size:35px;
+  }
+
+  .category p{
+    font-size:10px;
+  }
+
+  .promo{
+    margin:10px 15px 40px;
+    min-height:210px;
+  }
+
+  .promo h2{
+    font-size:27px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .product-image{
+    height:160px;
+    font-size:50px;
+  }
+
+  .product-info{
+    padding:12px;
+  }
+
+  .product h3{
+    font-size:14px;
+  }
+
+  .description{
+    font-size:10px;
+  }
+
+  .price{
+    font-size:16px;
+  }
+
+  .benefits-inner{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="haut"><div class="logo">RETOUR<span>.</span></div></div>
-
-<section class="hero"><div class="c">
-<p class="sur">Boutiques de bougies et de parfums d'intérieur</p>
-<h1>Vos clientes ont fini leur bougie. Elles ne pensent pas à en racheter. Retour le leur rappelle à votre place.</h1>
-<p>Une bougie dure 30 à 60 heures. Quelques semaines plus tard, elle est finie, et votre cliente ne revient pas : elle oublie, elle n'est pas déçue. Personne ne tient de fichier, personne ne relance.</p>
-<a class="btn" href="https://buy.stripe.com/test_eVq00mfiq47AaRk0jf9Zm00">Commencer : 25 €/mois</a>
-<p class="petit">Satisfait ou remboursé 30 jours. Sans engagement.</p>
-
-<svg class="bougies" viewBox="0 0 320 170" role="img" aria-label="Bougie, diffuseur et bougie cube Élyora Paris">
-<ellipse cx="160" cy="160" rx="150" ry="8" fill="#E5CFC6" opacity=".6"/>
-<path d="M70 34C62 48 63 56 70 58C77 56 78 48 70 34Z" fill="#E9B96E"/>
-<line x1="70" y1="58" x2="70" y2="70" stroke="#3B2B28" stroke-width="1.5"/>
-<rect x="30" y="70" width="80" height="84" rx="12" fill="#FBF3EC" stroke="#D9BFB2"/>
-<ellipse cx="70" cy="73" rx="34" ry="5" fill="#F1DFD2"/>
-<rect x="45" y="94" width="50" height="42" rx="3" fill="#FFFBF8" stroke="#C9A66B" stroke-width=".6"/>
-<text x="70" y="111" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#3B2B28" letter-spacing="1">ÉLYORA</text>
-<text x="70" y="121" text-anchor="middle" font-family="Georgia,serif" font-size="6" fill="#8a7068" letter-spacing="2">PARIS</text>
-<line x1="160" y1="72" x2="138" y2="18" stroke="#3B2B28" stroke-width="2"/>
-<line x1="160" y1="72" x2="158" y2="12" stroke="#3B2B28" stroke-width="2"/>
-<line x1="160" y1="72" x2="178" y2="16" stroke="#3B2B28" stroke-width="2"/>
-<line x1="160" y1="72" x2="186" y2="30" stroke="#3B2B28" stroke-width="2"/>
-<rect x="151" y="70" width="18" height="9" rx="2" fill="#C9A66B"/>
-<rect x="153" y="79" width="14" height="12" fill="#F6E7DE" stroke="#D9BFB2"/>
-<rect x="135" y="90" width="50" height="64" rx="12" fill="#F6E7DE" stroke="#D9BFB2"/>
-<rect x="145" y="108" width="30" height="30" rx="2" fill="#FFFBF8" stroke="#C9A66B" stroke-width=".6"/>
-<text x="160" y="121" text-anchor="middle" font-family="Georgia,serif" font-size="6" fill="#3B2B28" letter-spacing=".8">ÉLYORA</text>
-<text x="160" y="129" text-anchor="middle" font-family="Georgia,serif" font-size="4" fill="#8a7068" letter-spacing="1.5">PARIS</text>
-<path d="M255 40C249 52 250 58 255 60C260 58 261 52 255 40Z" fill="#E9B96E"/>
-<line x1="255" y1="60" x2="255" y2="68" stroke="#3B2B28" stroke-width="1.5"/>
-<g fill="#FBF3EC" stroke="#E3CDBF">
-<circle cx="255" cy="82" r="14"/>
-<circle cx="243" cy="108" r="16"/><circle cx="267" cy="108" r="16"/>
-<circle cx="233" cy="136" r="16"/><circle cx="255" cy="138" r="16"/><circle cx="277" cy="136" r="16"/>
-</g>
-</svg>
-</div></section>
-
-<main class="c">
-
-<h2>Le rappel, tel que le reçoit votre cliente</h2>
-<div class="tel">
-<small>Message de Élyora Paris</small>
-<div class="bulle">Bonjour Camille, votre bougie Fleur de coton doit être presque finie. Pour la remplacer, voici -10 % rien que pour vous, valable une seule fois : RETOUR-4F7K. À bientôt chez Élyora Paris.</div>
-</div>
-<p class="ex">Exemple de rappel. Le texte et l'offre sont les vôtres.</p>
-
-<h2>Trois choses, et rien d'autre</h2>
-<div class="carte"><span class="num">1</span><b>Vous notez le contact à l'encaissement.</b><br>Un numéro ou un email, dix secondes.</div>
-<div class="carte"><span class="num">2</span><b>Le rappel part tout seul.</b><br>Cinq semaines après l'achat (réglable), votre cliente reçoit un message à votre nom.</div>
-<div class="carte"><span class="num">3</span><b>Elle revient avec une offre à usage unique.</b><br>Et vous voyez combien de clientes sont revenues, et ce que ça a rapporté.</div>
-
-<h2>Ce que ça peut rapporter</h2>
-<p style="text-align:center">Exemple : 10 clientes par mois qui reviennent grâce au rappel, avec un panier de 35 €, font 350 € de ventes. Retour coûte 25 €, soit environ 0,83 € par jour.</p>
-
-<h2>Tarif</h2>
-<div class="carte">
-<p class="prix">25 €<span> / mois</span></p>
-<p style="text-align:center">Soit environ 0,83 € par jour. Tout est inclus. Sans engagement, résiliable à tout moment.</p>
-<p><b>Accès anticipé :</b> vous êtes parmi les premières boutiques. Votre accès est ouvert sous 7 jours après le paiement, et vous êtes prévenue par email.</p>
+<div class="announcement">
+  ✦ BIENVENUE CHEZ ÉLYORA PARIS — L'ÉLÉGANCE AU QUOTIDIEN ✦
 </div>
 
-<div class="garantie">
-<b class="serif">Satisfait ou remboursé, 30 jours.</b>
-<p style="margin:8px 0 0">Si Retour ne vous convient pas, écrivez-nous dans les 30 jours après votre paiement. Remboursement intégral sous 5 jours ouvrés, sans justification à fournir. Si votre accès n'est pas ouvert sous 7 jours, vous êtes aussi remboursée.</p>
-</div>
+<header>
 
-<a id="payer" class="btn" href="https://buy.stripe.com/test_eVq00mfiq47AaRk0jf9Zm00">Commencer : 25 €/mois</a>
-<p class="petit">Sans engagement, résiliable à tout moment. Paiement sécurisé par Stripe.</p>
+  <div class="header-main">
 
-<h2>Questions fréquentes</h2>
-<details><summary>Est-ce que ça marche pour ma boutique ?</summary><p>Retour est fait pour les boutiques de bougies et de parfums d'intérieur, dont les clientes rachètent quand le produit est fini. Si vous avez des clientes régulières, ça marche pour vous.</p></details>
-<details><summary>Combien de temps ça me prend ?</summary><p>Quelques minutes pour la mise en route, puis dix secondes par client à l'encaissement. Les rappels partent seuls.</p></details>
-<details><summary>Et si je veux arrêter ?</summary><p>Un simple email suffit, à tout moment, sans frais ni justification. Dans les 30 premiers jours, vous êtes remboursée.</p></details>
-<details><summary>À quoi sert exactement ce que je paie ?</summary><p>À l'envoi automatique des rappels à vos clientes, à l'offre de retour à usage unique et au suivi des clientes revenues et du chiffre généré.</p></details>
-</main>
+    <a class="logo" href="#">
+      ÉLYORA
+      <small>PARIS · HOME & SENSORY</small>
+    </a>
 
-<footer class="c">
-<a href="#mentions">Mentions légales</a><a href="#cgv">CGV</a><a href="#confidentialite">Confidentialité</a>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Rechercher dans la boutique...">
+      <button onclick="searchProducts()">Rechercher</button>
+    </div>
 
-<div class="legal" id="mentions">
-<h2 style="margin-top:0;text-align:left">Mentions légales</h2>
-<p>Éditeur : [RAISON SOCIALE OU NOM À COMPLÉTER], [FORME JURIDIQUE]<br>
-SIRET : [À COMPLÉTER]<br>
-Adresse : [À COMPLÉTER]<br>
-Email : [EMAIL À COMPLÉTER]<br>
-Directeur de la publication : [NOM À COMPLÉTER]</p>
-<p>Hébergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
-<p><a href="#">Retour à la page</a></p>
-</div>
+    <div class="icons">
+      <button class="cart-button" onclick="openCart()">
+        🛍️ Panier
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
 
-<div class="legal" id="cgv">
-<h2 style="margin-top:0;text-align:left">Conditions générales de vente</h2>
-<p><b>Objet.</b> Abonnement mensuel au service Retour : rappels automatiques aux clients d'une boutique, offre de retour à usage unique, compteur de résultats.</p>
-<p><b>Prix.</b> 25 € par mois. Paiement mensuel par carte via Stripe. [TVA : à compléter selon votre statut.]</p>
-<p><b>Accès anticipé.</b> Le service est en lancement. L'accès est ouvert au plus tard 7 jours après le paiement. À défaut, l'abonnement est remboursé sur demande.</p>
-<p><b>Garantie satisfait ou remboursé.</b> Dans les 30 jours suivant le premier paiement, sur simple demande par email, remboursement intégral sous 5 jours ouvrés.</p>
-<p><b>Résiliation.</b> Sans engagement. L'abonnement peut être résilié à tout moment par email. Il prend fin à la fin de la période déjà payée.</p>
-<p><b>Responsabilité.</b> Retour s'engage à envoyer les rappels paramétrés. Les ventes générées dépendent de la boutique et ne sont pas garanties.</p>
-<p><b>Droit applicable.</b> Droit français. Contact : [EMAIL À COMPLÉTER].</p>
-<p><a href="#">Retour à la page</a></p>
-</div>
+  </div>
 
-<div class="legal" id="confidentialite">
-<h2 style="margin-top:0;text-align:left">Politique de confidentialité</h2>
-<p><b>Responsable du traitement :</b> [RAISON SOCIALE À COMPLÉTER], [EMAIL À COMPLÉTER].</p>
-<p><b>Données collectées.</b> Votre email et les données de paiement, nécessaires à l'abonnement. Les données de carte sont traitées uniquement par Stripe et ne passent jamais par ce site.</p>
-<p><b>Finalités.</b> Gérer votre abonnement, vous donner accès au service, répondre à vos demandes.</p>
-<p><b>Durée.</b> Pendant la durée de l'abonnement, puis la durée légale de conservation des factures.</p>
-<p><b>Vos droits.</b> Accès, rectification, suppression : écrivez à [EMAIL À COMPLÉTER]. Vous pouvez aussi saisir la CNIL (cnil.fr).</p>
-<p><a href="#">Retour à la page</a></p>
-</div>
+  <nav>
+    <div class="nav-inner">
+      <a href="#">Accueil</a>
+      <a href="#categories">Nos catégories</a>
+      <a href="#products">La boutique</a>
+      <a href="#about">À propos</a>
+    </div>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="eyebrow">Maison · Parfum · Bien-être</div>
+
+    <h1>
+      ÉLYORA
+      <span>PARIS</span>
+    </h1>
+
+    <p>Des fragrances qui subliment votre quotidien.</p>
+
+    <button class="primary"
+      onclick="document.getElementById('products').scrollIntoView()">
+      Découvrir la collection →
+    </button>
+
+  </div>
+
+</section>
+
+
+<section class="container" id="categories">
+
+  <div class="section-head">
+    <small>L'univers Élyora</small>
+    <h2>Nos catégories</h2>
+  </div>
+
+  <div class="categories">
+
+    <div class="category" onclick="filterProducts('bougie')">
+      <div class="category-img">🕯️</div>
+      <p>Bougies parfumées</p>
+    </div>
+
+    <div class="category" onclick="filterProducts('diffuseur')">
+      <div class="category-img">🌾</div>
+      <p>Diffuseurs</p>
+    </div>
+
+    <div class="category" onclick="filterProducts('parfum')">
+      <div class="category-img">🌸</div>
+      <p>Parfums d'intérieur</p>
+    </div>
+
+    <div class="category" onclick="filterProducts('coffret')">
+      <div class="category-img">🎁</div>
+      <p>Coffrets cadeaux</p>
+    </div>
+
+    <div class="category" onclick="filterProducts('decoration')">
+      <div class="category-img">🤍</div>
+      <p>Décoration sensorielle</p>
+    </div>
+
+    <div class="category" onclick="filterProducts('accessoire')">
+      <div class="category-img">✨</div>
+      <p>Accessoires</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="promo">
+
+  <div>
+    <div class="eyebrow">ÉLYORA PARIS · HOME & SENSORY</div>
+
+    <h2>Créez une ambiance<br>qui vous ressemble</h2>
+
+    <p>
+      Bougies · Diffuseurs · Parfums d'intérieur · Coffrets cadeaux
+    </p>
+
+    <button class="primary"
+      onclick="document.getElementById('products').scrollIntoView()">
+      Découvrir →
+    </button>
+  </div>
+
+</section>
+
+
+<section class="container" id="products">
+
+  <div class="section-head">
+    <small>Notre sélection</small>
+    <h2>Objets en vente</h2>
+  </div>
+
+  <div class="filters">
+
+    <button class="filter active" onclick="filterProducts('all',this)">
+      Tout
+    </button>
+
+    <button class="filter" onclick="filterProducts('bougie',this)">
+      Bougies
+    </button>
+
+    <button class="filter" onclick="filterProducts('diffuseur',this)">
+      Diffuseurs
+    </button>
+
+    <button class="filter" onclick="filterProducts('parfum',this)">
+      Parfums
+    </button>
+
+    <button class="filter" onclick="filterProducts('coffret',this)">
+      Coffrets
+    </button>
+
+  </div>
+
+
+  <div class="products">
+
+    <article class="product" data-category="bougie" data-name="Bougie parfumée Fleur de coton">
+
+      <div class="product-image">
+        🕯️
+        <span class="badge">Nouveauté</span>
+        <button class="heart">♡</button>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-type">Bougie parfumée</div>
+
+        <h3>Fleur de coton</h3>
+
+        <p class="description">
+          Une fragrance douce et enveloppante pour une atmosphère chaleureuse.
+        </p>
+
+        <div class="price">16,90 €</div>
+
+        <div class="delivery">Livraison disponible</div>
+
+        <button class="add"
+          onclick="addToCart('Bougie Fleur de coton',16.90)">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product" data-category="diffuseur" data-name="Diffuseur Vanille Ambre">
+
+      <div class="product-image">
+        🌾
+        <span class="badge">Best-seller</span>
+        <button class="heart">♡</button>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-type">Diffuseur de parfum</div>
+
+        <h3>Vanille & Ambre</h3>
+
+        <p class="description">
+          Un parfum élégant aux notes chaudes de vanille et d'ambre.
+        </p>
+
+        <div class="price">18,90 €</div>
+
+        <div class="delivery">Livraison disponible</div>
+
+        <button class="add"
+          onclick="addToCart('Diffuseur Vanille & Ambre',18.90)">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product" data-category="parfum" data-name="Brume Linge propre">
+
+      <div class="product-image">
+        🌸
+        <span class="badge">Élyora</span>
+        <button class="heart">♡</button>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-type">Parfum d'intérieur</div>
+
+        <h3>Linge propre</h3>
+
+        <p class="description">
+          Une brume fraîche pour parfumer délicatement votre intérieur.
+        </p>
+
+        <div class="price">14,90 €</div>
+
+        <div class="delivery">Livraison disponible</div>
+
+        <button class="add"
+          onclick="addToCart('Brume Linge propre',14.90)">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product" data-category="coffret" data-name="Coffret découverte">
+
+      <div class="product-image">
+        🎁
+        <span class="badge">Idée cadeau</span>
+        <button class="heart">♡</button>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-type">Coffret cadeau</div>
+
+        <h3>Coffret découverte</h3>
+
+        <p class="description">
+          Une sélection Élyora à offrir ou à découvrir chez soi.
+        </p>
+
+        <div class="price">24,90 €</div>
+
+        <div class="delivery">Livraison disponible</div>
+
+        <button class="add"
+          onclick="addToCart('Coffret découverte',24.90)">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product" data-category="decoration" data-name="Bougie cube Monoi">
+
+      <div class="product-image">
+        🤍
+        <span class="badge">Tendance</span>
+        <button class="heart">♡</button>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-type">Décoration sensorielle</div>
+
+        <h3>Bougie cube Monoï</h3>
+
+        <p class="description">
+          Une création décorative aux notes estivales.
+        </p>
+
+        <div class="price">12,90 €</div>
+
+        <div class="delivery">Livraison disponible</div>
+
+        <button class="add"
+          onclick="addToCart('Bougie cube Monoï',12.90)">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product" data-category="accessoire" data-name="Accessoire bougie">
+
+      <div class="product-image">
+        ✨
+        <span class="badge">Accessoire</span>
+        <button class="heart">♡</button>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-type">Accessoire</div>
+
+        <h3>Éteignoir doré</h3>
+
+        <p class="description">
+          L'accessoire élégant pour accompagner vos bougies.
+        </p>
+
+        <div class="price">9,90 €</div>
+
+        <div class="delivery">Livraison disponible</div>
+
+        <button class="add"
+          onclick="addToCart('Éteignoir doré',9.90)">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="benefits">
+
+  <div class="benefits-inner">
+
+    <div class="benefit">
+      <span>📦</span>
+      <strong>Expédition soignée</strong>
+      <p>Vos commandes préparées avec attention.</p>
+    </div>
+
+    <div class="benefit">
+      <span>♡</span>
+      <strong>Sélection Élyora</strong>
+      <p>Des créations choisies avec soin.</p>
+    </div>
+
+    <div class="benefit">
+      <span>🌿</span>
+      <strong>Ambiance & bien-être</strong>
+      <p>Pour créer un intérieur qui vous ressemble.</p>
+    </div>
+
+    <div class="benefit">
+      <span>🎁</span>
+      <strong>Emballage soigné</strong>
+      <p>Idéal pour offrir ou se faire plaisir.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer id="about">
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">ÉLYORA PARIS</div>
+
+      <p>
+        Home & Sensory<br>
+        Des fragrances qui subliment votre quotidien.
+      </p>
+
+    </div>
+
+    <div>
+      <h4>La boutique</h4>
+      <p><a href="#products">Nos produits</a></p>
+      <p><a href="#categories">Nos catégories</a></p>
+    </div>
+
+    <div>
+      <h4>Informations</h4>
+      <p><a href="#">Mentions légales</a></p>
+      <p><a href="#">CGV</a></p>
+      <p><a href="#">Confidentialité</a></p>
+      <p><a href="#">Contact</a></p>
+    </div>
+
+  </div>
+
 </footer>
 
-<div class="fixe"><a class="btn" href="https://buy.stripe.com/test_eVq00mfiq47AaRk0jf9Zm00">Commencer : 25 €/mois</a></div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeOutside(event)">
+
+  <aside class="cart">
+
+    <div class="cart-header">
+
+      <h2>Votre panier</h2>
+
+      <button class="close" onclick="closeCart()">×</button>
+
+    </div>
+
+    <div id="cartItems">
+
+      <div class="cart-empty">
+        Votre panier est vide.<br><br>
+        Découvrez la collection Élyora Paris.
+      </div>
+
+    </div>
+
+    <div id="cartFooter" style="display:none">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">0,00 €</span>
+      </div>
+
+      <button class="checkout" onclick="checkout()">
+        Commander →
+      </button>
+
+      <p style="font-size:10px;text-align:center;color:#777;margin-top:10px">
+        Paiement sécurisé
+      </p>
+
+    </div>
+
+  </aside>
+
+</div>
+
+
+<script>
+
+let cart=[];
+
+function addToCart(name,price){
+
+  cart.push({
+    name:name,
+    price:price
+  });
+
+  updateCart();
+
+  openCart();
+}
+
+
+function updateCart(){
+
+  const count=document.getElementById("cartCount");
+  const items=document.getElementById("cartItems");
+  const footer=document.getElementById("cartFooter");
+
+  count.textContent=cart.length;
+
+  if(cart.length===0){
+
+    items.innerHTML=
+      '<div class="cart-empty">Votre panier est vide.<br><br>Découvrez la collection Élyora Paris.</div>';
+
+    footer.style.display="none";
+
+    return;
+  }
+
+  footer.style.display="block";
+
+  items.innerHTML="";
+
+  let total=0;
+
+  cart.forEach((item,index)=>{
+
+    total+=item.price;
+
+    const div=document.createElement("div");
+
+    div.className="cart-item";
+
+    div.innerHTML=
+      '<div>'+
+      '<strong>'+item.name+'</strong>'+
+      '<p>'+item.price.toFixed(2).replace(".",",")+' €</p>'+
+      '</div>'+
+      '<button class="remove" onclick="removeItem('+index+')">Supprimer</button>';
+
+    items.appendChild(div);
+
+  });
+
+  document.getElementById("cartTotal").textContent=
+    total.toFixed(2).replace(".",",")+" €";
+}
+
+
+function removeItem(index){
+
+  cart.splice(index,1);
+
+  updateCart();
+}
+
+
+function openCart(){
+
+  document.getElementById("cartOverlay").classList.add("show");
+}
+
+
+function closeCart(){
+
+  document.getElementById("cartOverlay").classList.remove("show");
+}
+
+
+function closeOutside(event){
+
+  if(event.target.id==="cartOverlay"){
+    closeCart();
+  }
+}
+
+
+function filterProducts(category,button){
+
+  const products=document.querySelectorAll(".product");
+
+  products.forEach(product=>{
+
+    if(category==="all" || product.dataset.category===category){
+
+      product.style.display="block";
+
+    }else{
+
+      product.style.display="none";
+
+    }
+
+  });
+
+  if(button){
+
+    document.querySelectorAll(".filter").forEach(btn=>{
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+  }
+
+  document.getElementById("products").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+
+function searchProducts(){
+
+  const query=
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+  document.querySelectorAll(".product").forEach(product=>{
+
+    const name=
+      product.dataset.name.toLowerCase();
+
+    product.style.display=
+      name.includes(query) ? "block" : "none";
+
+  });
+
+  document.getElementById("products").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+
+function checkout(){
+
+  alert(
+    "Le panier fonctionne ! Prochaine étape : nous connecterons le paiement sécurisé."
+  );
+}
+
+</script>
+
 </body>
 </html>
