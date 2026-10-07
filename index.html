@@ -4,64 +4,115 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Retour : le rappel qui fait revenir vos clientes</title>
-<meta name="description" content="Vos clientes ont fini leur bougie. Retour leur rappelle de en racheter une, à votre place. 25 €/mois, satisfait ou remboursé 30 jours.">
+<meta name="description" content="Vos clientes ont fini leur bougie. Elles ne pensent pas à en racheter. Retour le leur rappelle à votre place. 25 €/mois, satisfait ou remboursé 30 jours.">
 <meta property="og:title" content="Retour : le rappel qui fait revenir vos clientes">
 <meta property="og:description" content="Vos clientes ont fini leur bougie. Retour le leur rappelle à votre place.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <style>
-:root{--fond:#F6EFE6;--encre:#2B1D16;--accent:#B4492B;--clair:#EADFD0}
+:root{--fond:#F8F0E9;--rose:#EFD3CC;--encre:#3B2B28;--accent:#A55F5C;--or:#B8955A;--blanc:#FFFBF8;--ligne:#E6D3C9}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--fond);color:var(--encre);font:18px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
-main,footer{max-width:640px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;font-weight:700}
-h1{font-size:2.1rem;margin:36px 0 16px}
-h2{font-size:1.5rem;margin:48px 0 14px}
-.marque{font-family:Georgia,serif;font-weight:700;letter-spacing:.04em;padding-top:20px;font-size:1.1rem}
-.marque span{color:var(--accent)}
-.btn{display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:18px 20px;border-radius:12px;font-size:1.1rem}
-.petit{font-size:.9rem;opacity:.8;text-align:center;margin:10px 0 0}
-.carte{background:#fff;border:1px solid var(--clair);border-radius:14px;padding:18px 20px;margin:12px 0}
-.carte b{font-family:Georgia,serif;font-size:1.1rem}
-.prix{font-family:Georgia,serif;font-size:2.6rem;font-weight:700;margin:0}
-.garantie{border:2px solid var(--accent);border-radius:14px;padding:18px 20px;margin:20px 0}
-details{border-bottom:1px solid var(--clair);padding:14px 0}
+body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
+.c{max-width:640px;margin:0 auto;padding:0 20px}
+h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:700;line-height:1.18}
+h1{font-size:2rem;margin:18px 0 14px}
+h2{font-size:1.5rem;margin:52px 0 14px;text-align:center}
+h2:after{content:"";display:block;width:44px;height:2px;background:var(--or);margin:12px auto 0}
+.haut{background:var(--blanc);border-bottom:1px solid var(--ligne);text-align:center;padding:16px 0}
+.logo{font-family:Georgia,serif;font-weight:700;letter-spacing:.32em;font-size:1.05rem}
+.logo span{color:var(--accent)}
+.hero{background:linear-gradient(var(--rose),var(--fond));padding:30px 0 10px;text-align:center}
+.sur{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0}
+.btn{display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:18px 20px;border-radius:999px;font-size:1.08rem;box-shadow:0 6px 18px rgba(165,95,92,.28)}
+.petit{font-size:.88rem;opacity:.85;text-align:center;margin:10px 0 0}
+.bougies{display:block;width:100%;max-width:360px;margin:22px auto 0}
+.tel{width:270px;max-width:100%;margin:0 auto;background:var(--blanc);border:7px solid #E5CFC6;border-radius:34px;padding:16px 14px 18px;box-shadow:0 14px 30px rgba(59,43,40,.12)}
+.tel small{display:block;text-align:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#8a7068;margin-bottom:10px}
+.bulle{background:var(--rose);border-radius:18px 18px 18px 4px;padding:12px 14px;font-size:.92rem;line-height:1.45;text-align:left}
+.ex{text-align:center;font-size:.82rem;opacity:.75;margin:12px 0 0}
+.carte{background:var(--blanc);border:1px solid var(--ligne);border-radius:18px;padding:18px 20px;margin:12px 0}
+.num{display:inline-block;width:30px;height:30px;line-height:30px;text-align:center;border-radius:50%;background:var(--rose);color:var(--accent);font-family:Georgia,serif;font-weight:700;margin-right:8px}
+.carte b{font-family:Georgia,serif;font-size:1.08rem}
+.prix{font-family:Georgia,serif;font-size:2.8rem;font-weight:700;margin:0;text-align:center}
+.prix span{font-size:1rem;font-weight:400}
+.garantie{background:var(--blanc);border:2px solid var(--or);border-radius:18px;padding:18px 20px;margin:20px 0}
+details{border-bottom:1px solid var(--ligne);padding:14px 0}
 summary{font-weight:700;cursor:pointer}
 footer{padding-top:40px;padding-bottom:20px;font-size:.9rem}
 footer a{color:var(--encre);margin-right:14px}
-.legal{display:none;background:#fff;border-radius:14px;padding:20px;margin:24px 0;font-size:.95rem}
+.legal{display:none;background:var(--blanc);border-radius:14px;padding:20px;margin:24px 0;font-size:.95rem}
 .legal:target{display:block}
-.fixe{position:fixed;left:0;right:0;bottom:0;background:var(--fond);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--clair)}
+.fixe{position:fixed;left:0;right:0;bottom:0;background:var(--fond);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--ligne)}
 .fixe .btn{max-width:640px;margin:0 auto;padding:15px}
 </style>
 </head>
 <body>
-<main>
-<div class="marque">RETOUR<span>.</span></div>
 
+<div class="haut"><div class="logo">RETOUR<span>.</span></div></div>
+
+<section class="hero"><div class="c">
+<p class="sur">Boutiques de bougies et de parfums d'intérieur</p>
 <h1>Vos clientes ont fini leur bougie. Elles ne pensent pas à en racheter. Retour le leur rappelle à votre place.</h1>
 <p>Une bougie dure 30 à 60 heures. Quelques semaines plus tard, elle est finie, et votre cliente ne revient pas : elle oublie, elle n'est pas déçue. Personne ne tient de fichier, personne ne relance.</p>
 <a class="btn" href="https://buy.stripe.com/test_eVq00mfiq47AaRk0jf9Zm00">Commencer : 25 €/mois</a>
 <p class="petit">Satisfait ou remboursé 30 jours. Sans engagement.</p>
 
+<svg class="bougies" viewBox="0 0 320 170" role="img" aria-label="Bougie, diffuseur et bougie cube Élyora Paris">
+<ellipse cx="160" cy="160" rx="150" ry="8" fill="#E5CFC6" opacity=".6"/>
+<path d="M70 34C62 48 63 56 70 58C77 56 78 48 70 34Z" fill="#E9B96E"/>
+<line x1="70" y1="58" x2="70" y2="70" stroke="#3B2B28" stroke-width="1.5"/>
+<rect x="30" y="70" width="80" height="84" rx="12" fill="#FBF3EC" stroke="#D9BFB2"/>
+<ellipse cx="70" cy="73" rx="34" ry="5" fill="#F1DFD2"/>
+<rect x="45" y="94" width="50" height="42" rx="3" fill="#FFFBF8" stroke="#C9A66B" stroke-width=".6"/>
+<text x="70" y="111" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#3B2B28" letter-spacing="1">ÉLYORA</text>
+<text x="70" y="121" text-anchor="middle" font-family="Georgia,serif" font-size="6" fill="#8a7068" letter-spacing="2">PARIS</text>
+<line x1="160" y1="72" x2="138" y2="18" stroke="#3B2B28" stroke-width="2"/>
+<line x1="160" y1="72" x2="158" y2="12" stroke="#3B2B28" stroke-width="2"/>
+<line x1="160" y1="72" x2="178" y2="16" stroke="#3B2B28" stroke-width="2"/>
+<line x1="160" y1="72" x2="186" y2="30" stroke="#3B2B28" stroke-width="2"/>
+<rect x="151" y="70" width="18" height="9" rx="2" fill="#C9A66B"/>
+<rect x="153" y="79" width="14" height="12" fill="#F6E7DE" stroke="#D9BFB2"/>
+<rect x="135" y="90" width="50" height="64" rx="12" fill="#F6E7DE" stroke="#D9BFB2"/>
+<rect x="145" y="108" width="30" height="30" rx="2" fill="#FFFBF8" stroke="#C9A66B" stroke-width=".6"/>
+<text x="160" y="121" text-anchor="middle" font-family="Georgia,serif" font-size="6" fill="#3B2B28" letter-spacing=".8">ÉLYORA</text>
+<text x="160" y="129" text-anchor="middle" font-family="Georgia,serif" font-size="4" fill="#8a7068" letter-spacing="1.5">PARIS</text>
+<path d="M255 40C249 52 250 58 255 60C260 58 261 52 255 40Z" fill="#E9B96E"/>
+<line x1="255" y1="60" x2="255" y2="68" stroke="#3B2B28" stroke-width="1.5"/>
+<g fill="#FBF3EC" stroke="#E3CDBF">
+<circle cx="255" cy="82" r="14"/>
+<circle cx="243" cy="108" r="16"/><circle cx="267" cy="108" r="16"/>
+<circle cx="233" cy="136" r="16"/><circle cx="255" cy="138" r="16"/><circle cx="277" cy="136" r="16"/>
+</g>
+</svg>
+</div></section>
+
+<main class="c">
+
+<h2>Le rappel, tel que le reçoit votre cliente</h2>
+<div class="tel">
+<small>Message de Élyora Paris</small>
+<div class="bulle">Bonjour Camille, votre bougie Fleur de coton doit être presque finie. Pour la remplacer, voici -10 % rien que pour vous, valable une seule fois : RETOUR-4F7K. À bientôt chez Élyora Paris.</div>
+</div>
+<p class="ex">Exemple de rappel. Le texte et l'offre sont les vôtres.</p>
+
 <h2>Trois choses, et rien d'autre</h2>
-<div class="carte"><b>Vous notez le contact à l'encaissement.</b><br>Un numéro ou un email, dix secondes.</div>
-<div class="carte"><b>Le rappel part tout seul.</b><br>Cinq semaines après l'achat (réglable), votre cliente reçoit un message à votre nom.</div>
-<div class="carte"><b>Elle revient avec une offre à usage unique.</b><br>Et vous voyez combien de clientes sont revenues, et ce que ça a rapporté.</div>
+<div class="carte"><span class="num">1</span><b>Vous notez le contact à l'encaissement.</b><br>Un numéro ou un email, dix secondes.</div>
+<div class="carte"><span class="num">2</span><b>Le rappel part tout seul.</b><br>Cinq semaines après l'achat (réglable), votre cliente reçoit un message à votre nom.</div>
+<div class="carte"><span class="num">3</span><b>Elle revient avec une offre à usage unique.</b><br>Et vous voyez combien de clientes sont revenues, et ce que ça a rapporté.</div>
 
 <h2>Ce que ça peut rapporter</h2>
-<p>Exemple : 10 clientes par mois qui reviennent grâce au rappel, avec un panier de 35 €, font 350 € de ventes. Retour coûte 25 €. Soit environ 0,83 € par jour.</p>
+<p style="text-align:center">Exemple : 10 clientes par mois qui reviennent grâce au rappel, avec un panier de 35 €, font 350 € de ventes. Retour coûte 25 €, soit environ 0,83 € par jour.</p>
 
 <h2>Tarif</h2>
 <div class="carte">
-<p class="prix">25 €<span style="font-size:1rem;font-weight:400"> / mois</span></p>
-<p>Soit environ 0,83 € par jour. Tout est inclus. Sans engagement, résiliable à tout moment.</p>
+<p class="prix">25 €<span> / mois</span></p>
+<p style="text-align:center">Soit environ 0,83 € par jour. Tout est inclus. Sans engagement, résiliable à tout moment.</p>
 <p><b>Accès anticipé :</b> vous êtes parmi les premières boutiques. Votre accès est ouvert sous 7 jours après le paiement, et vous êtes prévenue par email.</p>
 </div>
 
 <div class="garantie">
-<b>Satisfait ou remboursé, 30 jours.</b>
+<b class="serif">Satisfait ou remboursé, 30 jours.</b>
 <p style="margin:8px 0 0">Si Retour ne vous convient pas, écrivez-nous dans les 30 jours après votre paiement. Remboursement intégral sous 5 jours ouvrés, sans justification à fournir. Si votre accès n'est pas ouvert sous 7 jours, vous êtes aussi remboursée.</p>
 </div>
 
@@ -75,11 +126,11 @@ footer a{color:var(--encre);margin-right:14px}
 <details><summary>À quoi sert exactement ce que je paie ?</summary><p>À l'envoi automatique des rappels à vos clientes, à l'offre de retour à usage unique et au suivi des clientes revenues et du chiffre généré.</p></details>
 </main>
 
-<footer>
+<footer class="c">
 <a href="#mentions">Mentions légales</a><a href="#cgv">CGV</a><a href="#confidentialite">Confidentialité</a>
 
 <div class="legal" id="mentions">
-<h2 style="margin-top:0">Mentions légales</h2>
+<h2 style="margin-top:0;text-align:left">Mentions légales</h2>
 <p>Éditeur : [RAISON SOCIALE OU NOM À COMPLÉTER], [FORME JURIDIQUE]<br>
 SIRET : [À COMPLÉTER]<br>
 Adresse : [À COMPLÉTER]<br>
@@ -90,7 +141,7 @@ Directeur de la publication : [NOM À COMPLÉTER]</p>
 </div>
 
 <div class="legal" id="cgv">
-<h2 style="margin-top:0">Conditions générales de vente</h2>
+<h2 style="margin-top:0;text-align:left">Conditions générales de vente</h2>
 <p><b>Objet.</b> Abonnement mensuel au service Retour : rappels automatiques aux clients d'une boutique, offre de retour à usage unique, compteur de résultats.</p>
 <p><b>Prix.</b> 25 € par mois. Paiement mensuel par carte via Stripe. [TVA : à compléter selon votre statut.]</p>
 <p><b>Accès anticipé.</b> Le service est en lancement. L'accès est ouvert au plus tard 7 jours après le paiement. À défaut, l'abonnement est remboursé sur demande.</p>
@@ -102,7 +153,7 @@ Directeur de la publication : [NOM À COMPLÉTER]</p>
 </div>
 
 <div class="legal" id="confidentialite">
-<h2 style="margin-top:0">Politique de confidentialité</h2>
+<h2 style="margin-top:0;text-align:left">Politique de confidentialité</h2>
 <p><b>Responsable du traitement :</b> [RAISON SOCIALE À COMPLÉTER], [EMAIL À COMPLÉTER].</p>
 <p><b>Données collectées.</b> Votre email et les données de paiement, nécessaires à l'abonnement. Les données de carte sont traitées uniquement par Stripe et ne passent jamais par ce site.</p>
 <p><b>Finalités.</b> Gérer votre abonnement, vous donner accès au service, répondre à vos demandes.</p>
