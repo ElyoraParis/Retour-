@@ -4,882 +4,618 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ÉLYORA PARIS — Home & Sensory</title>
-<meta name="description" content="ÉLYORA PARIS — Bougies parfumées et créations pour sublimer votre intérieur.">
+<title>Élyora Paris — Home & Sensory</title>
 
 <style>
 *{
   box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
-  color:#2e2623;
+  padding:0;
 }
 
 :root{
-  --rose:#efd6cf;
-  --rose-clair:#faf0ec;
-  --creme:#fbf8f4;
-  --brun:#392a26;
-  --or:#b88a55;
-  --gris:#6e6865;
-  --bord:#e8dfda;
+  --brun:#3c2924;
+  --rose:#efd4cb;
+  --roseclair:#fbf2ee;
+  --or:#b88959;
+  --gris:#6c625f;
+  --blanc:#ffffff;
 }
 
-/* =========================
-   BARRE DU HAUT
-========================= */
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:#2d2421;
+}
+
+/* BARRE DU HAUT */
 
 .topbar{
-  background:#392a26;
+  background:var(--brun);
   color:white;
   text-align:center;
-  font-size:11px;
-  padding:8px 10px;
-  letter-spacing:.08em;
+  padding:11px 10px;
+  font-size:13px;
+  letter-spacing:2px;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
-.header{
+header{
   background:white;
-  border-bottom:1px solid #e7e7e7;
+  border-bottom:1px solid #eee;
 }
 
 .header-main{
-  max-width:1250px;
+  max-width:1300px;
   margin:auto;
-  padding:12px 18px;
+  padding:22px 22px 16px;
   display:flex;
+  justify-content:space-between;
   align-items:center;
   gap:20px;
 }
 
 .logo{
-  width:180px;
-  text-align:center;
-}
-
-.logo-title{
   font-family:Georgia,serif;
-  font-size:25px;
-  letter-spacing:.20em;
+  font-size:38px;
+  letter-spacing:7px;
+  color:#352521;
 }
 
-.logo-sub{
-  font-size:8px;
-  letter-spacing:.30em;
-  margin-top:4px;
+.logo small{
+  display:block;
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:4px;
+  margin-top:5px;
 }
 
-.search{
-  flex:1;
-  display:flex;
-  border:1px solid #aaa;
-  border-radius:24px;
-  overflow:hidden;
-  height:42px;
-}
-
-.search input{
-  flex:1;
-  border:0;
-  outline:none;
-  padding:0 17px;
-  font-size:13px;
-}
-
-.search button{
-  border:0;
-  background:#392a26;
-  color:white;
-  padding:0 22px;
-}
-
-.header-actions{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.icon-btn{
-  border:1px solid #ddd;
-  background:white;
-  height:40px;
-  min-width:40px;
-  border-radius:22px;
-  font-size:16px;
-}
-
-.cart-btn{
-  border:0;
-  background:#f7e5e0;
-  color:#392a26;
-  padding:11px 15px;
-  border-radius:22px;
-  font-weight:700;
+.cart{
+  background:#f8e5df;
+  padding:15px 22px;
+  border-radius:35px;
+  font-weight:bold;
+  cursor:pointer;
   position:relative;
 }
 
 .cart-count{
   position:absolute;
-  right:-4px;
-  top:-7px;
-  width:19px;
-  height:19px;
-  background:#392a26;
+  top:-9px;
+  right:3px;
+  background:#392722;
   color:white;
+  width:25px;
+  height:25px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:10px;
-}
-
-/* =========================
-   GRANDE BANNIÈRE PHOTO
-========================= */
-
-.brand-banner{
-  position:relative;
-  height:250px;
-  overflow:hidden;
-  background:#ead0c5;
-}
-
-.brand-banner img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 48%;
-  display:block;
-}
-
-.brand-banner::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    90deg,
-    rgba(45,29,22,.10),
-    rgba(255,255,255,.05),
-    rgba(45,29,22,.08)
-  );
-}
-
-.banner-logo{
-  position:absolute;
-  z-index:2;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-  background:rgba(255,247,242,.87);
-  padding:20px 38px;
-  min-width:310px;
-  border:1px solid rgba(255,255,255,.8);
-}
-
-.banner-logo strong{
-  display:block;
-  font-family:Georgia,serif;
-  font-size:34px;
-  letter-spacing:.18em;
-  font-weight:400;
-}
-
-.banner-logo span{
-  display:block;
-  font-size:10px;
-  letter-spacing:.30em;
-  margin-top:7px;
-}
-
-.banner-logo em{
-  display:block;
-  font-family:Georgia,serif;
-  font-size:15px;
-  margin-top:10px;
-}
-
-/* =========================
-   PROFIL BOUTIQUE
-========================= */
-
-.shop-profile{
-  max-width:1250px;
-  margin:auto;
-  padding:14px 18px;
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.avatar{
-  width:75px;
-  height:75px;
-  min-width:75px;
-  border-radius:50%;
-  background:#f5e2dc;
-  border:4px solid white;
-  box-shadow:0 1px 7px rgba(0,0,0,.12);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:Georgia,serif;
-  text-align:center;
-}
-
-.avatar div{
-  font-size:13px;
-  letter-spacing:.08em;
-}
-
-.avatar small{
-  display:block;
-  font-family:Arial;
-  font-size:6px;
-  margin-top:3px;
-}
-
-.shop-info{
-  flex:1;
-}
-
-.shop-info h1{
-  margin:0;
-  font-size:20px;
-}
-
-.shop-info p{
-  margin:4px 0 0;
-  color:#6f6865;
-  font-size:11px;
-}
-
-.follow{
-  border:0;
-  background:#392a26;
-  color:white;
-  padding:10px 17px;
-  border-radius:20px;
   font-size:12px;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* RECHERCHE */
 
-.navigation{
+.search-wrap{
+  max-width:1300px;
+  margin:auto;
+  padding:0 22px 18px;
+  display:flex;
+}
+
+.search-wrap input{
+  flex:1;
+  height:55px;
+  border:1px solid #bbb;
+  border-right:0;
+  border-radius:30px 0 0 30px;
+  padding:0 25px;
+  font-size:17px;
+  outline:none;
+}
+
+.search-wrap button{
+  width:150px;
+  border:0;
+  background:var(--brun);
+  color:white;
+  border-radius:0 30px 30px 0;
+  font-size:15px;
+}
+
+/* NAVIGATION */
+
+nav{
   border-top:1px solid #eee;
   border-bottom:1px solid #ddd;
   background:white;
 }
 
-.navigation-inner{
-  max-width:1250px;
+.nav-inner{
+  max-width:1300px;
   margin:auto;
   display:flex;
-  gap:32px;
-  padding:12px 18px;
-  font-size:12px;
+  gap:42px;
+  padding:16px 22px;
 }
 
-.navigation a{
+nav a{
   text-decoration:none;
-  color:#292321;
-  white-space:nowrap;
+  color:#332825;
+  font-size:15px;
 }
 
-.navigation a:first-child{
+nav a:first-child{
   font-weight:bold;
-  border-bottom:2px solid #392a26;
-  padding-bottom:10px;
+  border-bottom:3px solid var(--brun);
+  padding-bottom:13px;
 }
 
-/* =========================
-   CORPS BOUTIQUE
-========================= */
+/* HERO */
 
-.store{
-  max-width:1250px;
-  margin:16px auto 50px;
-  padding:0 18px;
+.hero{
+  position:relative;
+  width:100%;
+  height:440px;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-box{
+  background:rgba(255,248,244,.88);
+  padding:35px 60px;
+  text-align:center;
+  max-width:620px;
+  backdrop-filter:blur(2px);
+}
+
+.hero-box h1{
+  font-family:Georgia,serif;
+  font-size:48px;
+  letter-spacing:9px;
+  font-weight:normal;
+}
+
+.hero-box .paris{
+  letter-spacing:7px;
+  margin:8px 0 18px;
+}
+
+.hero-box p{
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:23px;
+}
+
+.hero-btn{
+  display:inline-block;
+  margin-top:22px;
+  background:#dcae9f;
+  color:white;
+  text-decoration:none;
+  padding:14px 30px;
+  border-radius:30px;
+}
+
+/* PROFIL BOUTIQUE */
+
+.shop-info{
+  max-width:1300px;
+  margin:auto;
+  padding:22px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  border-bottom:1px solid #eee;
+}
+
+.shop-logo{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:#f7e5df;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  font-family:Georgia,serif;
+  box-shadow:0 3px 14px #ddd;
+}
+
+.shop-logo strong{
+  letter-spacing:2px;
+}
+
+.shop-logo small{
+  font-size:8px;
+  margin-top:5px;
+  letter-spacing:2px;
+}
+
+.shop-text{
+  flex:1;
+}
+
+.shop-text h2{
+  font-size:25px;
+  margin-bottom:5px;
+}
+
+.shop-text p{
+  color:#756b68;
+  line-height:1.5;
+}
+
+.discover{
+  background:var(--brun);
+  color:white;
+  padding:13px 25px;
+  border-radius:28px;
+  text-decoration:none;
+}
+
+/* CONTENU */
+
+.page{
+  max-width:1300px;
+  margin:auto;
   display:grid;
-  grid-template-columns:200px 1fr;
-  gap:20px;
+  grid-template-columns:210px 1fr;
+  gap:25px;
+  padding:28px 22px 60px;
 }
 
-/* =========================
-   MENU GAUCHE
-========================= */
+/* MENU GAUCHE */
 
 .sidebar{
-  font-size:12px;
+  border-right:1px solid #eee;
+  padding-right:20px;
 }
 
 .sidebar h3{
-  margin:0 0 13px;
-  font-size:14px;
+  margin-bottom:18px;
+  font-size:17px;
 }
 
 .sidebar a{
   display:block;
+  color:#423632;
   text-decoration:none;
-  color:#302a27;
-  padding:7px 0;
+  padding:8px 0;
+  font-size:14px;
 }
 
-.sidebar a:hover{
-  color:#b27a6d;
+.features{
+  background:#fff4f0;
+  padding:18px;
+  border-radius:12px;
+  margin-top:30px;
 }
 
-.benefits{
-  background:#fbefeb;
-  border-radius:10px;
-  margin-top:25px;
-  padding:15px;
-}
-
-.benefit{
-  display:flex;
-  gap:10px;
-  margin:0 0 18px;
-}
-
-.benefit:last-child{
-  margin-bottom:0;
-}
-
-.benefit-icon{
-  width:29px;
-  height:29px;
-  border:1px solid #a99086;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.feature{
+  margin-bottom:18px;
   font-size:13px;
+  line-height:1.5;
 }
 
-.benefit strong{
+.feature strong{
   display:block;
-  font-size:11px;
+  font-size:14px;
 }
 
-.benefit span{
-  display:block;
-  color:#766e6a;
-  font-size:9px;
-  margin-top:3px;
-}
+/* BANNIERE COLLECTION */
 
-/* =========================
-   CONTENU
-========================= */
-
-.content{
-  min-width:0;
-}
-
-/* PETITE BANNIÈRE */
-
-.promo-banner{
-  height:190px;
-  border-radius:10px;
+.collection-banner{
+  height:240px;
+  border-radius:18px;
   overflow:hidden;
   position:relative;
-  margin-bottom:20px;
+  margin-bottom:32px;
 }
 
-.promo-banner img{
+.collection-banner img{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 52%;
 }
 
-.promo-overlay{
+.collection-text{
   position:absolute;
-  inset:0;
+  right:0;
+  top:0;
+  height:100%;
+  width:50%;
   background:linear-gradient(
     90deg,
-    rgba(255,245,240,.08),
-    rgba(255,245,240,.88)
+    rgba(255,255,255,.25),
+    rgba(255,245,241,.94)
   );
-}
-
-.promo-text{
-  position:absolute;
-  right:5%;
-  top:50%;
-  transform:translateY(-50%);
-  width:43%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
+  padding:25px;
 }
 
-.promo-text small{
-  font-size:8px;
-  letter-spacing:.20em;
+.collection-text small{
+  letter-spacing:3px;
 }
 
-.promo-text h2{
+.collection-text h2{
   font-family:Georgia,serif;
-  font-weight:400;
-  font-size:25px;
-  margin:8px 0;
+  font-weight:normal;
+  font-size:34px;
+  margin:12px 0;
 }
 
-.promo-text p{
-  font-size:9px;
-  letter-spacing:.10em;
-}
-
-.promo-text button{
-  border:0;
-  background:#d9a69c;
+.collection-text a{
+  background:#dfa99d;
   color:white;
-  border-radius:18px;
-  padding:9px 18px;
-  font-size:11px;
+  text-decoration:none;
+  padding:12px 25px;
+  border-radius:30px;
 }
 
-/* =========================
-   CATÉGORIES
-========================= */
+/* TITRES */
 
 .section-title{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  margin:15px 0 10px;
+  align-items:center;
+  margin:15px 0 18px;
 }
 
 .section-title h2{
-  margin:0;
-  font-size:18px;
+  font-size:26px;
 }
 
 .section-title a{
-  color:#7d5c54;
-  font-size:11px;
+  color:#745b53;
+  font-size:14px;
 }
 
-.categories{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:10px;
-}
-
-.category{
-  border:1px solid #e6ddd8;
-  background:white;
-  border-radius:8px;
-  overflow:hidden;
-  cursor:pointer;
-}
-
-.category-image{
-  height:105px;
-  overflow:hidden;
-}
-
-.category-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1.4);
-}
-
-.cat1 img{object-position:18% 50%;}
-.cat2 img{object-position:48% 47%;}
-.cat3 img{object-position:73% 43%;}
-.cat4 img{object-position:92% 54%;}
-.cat5 img{object-position:50% 78%;}
-
-.category-name{
-  min-height:39px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  font-size:10px;
-  font-weight:bold;
-  padding:5px;
-}
-
-/* =========================
-   PRODUITS
-========================= */
+/* PRODUITS */
 
 .products{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:12px;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
 .product{
-  min-width:0;
-}
-
-.product-photo{
-  position:relative;
-  height:180px;
+  border:1px solid #e6ddd9;
+  border-radius:15px;
+  background:white;
   overflow:hidden;
-  border-radius:9px;
-  background:#f5ebe6;
+  position:relative;
+  transition:.2s;
 }
 
-.product-photo img{
+.product:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.product-image{
+  position:relative;
+  background:#f8eeea;
+  aspect-ratio:1/1;
+  overflow:hidden;
+}
+
+.product-image img{
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block;
-  transform:scale(1.65);
 }
-
-.p1 img{object-position:10% 55%;}
-.p2 img{object-position:30% 23%;}
-.p3 img{object-position:51% 54%;}
-.p4 img{object-position:72% 35%;}
-.p5 img{object-position:91% 58%;}
 
 .heart{
   position:absolute;
-  right:7px;
-  top:7px;
-  width:28px;
-  height:28px;
-  border:0;
-  border-radius:50%;
+  top:12px;
+  right:12px;
   background:white;
-  font-size:17px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:19px;
+  box-shadow:0 2px 8px #aaa5;
 }
 
-.product h3{
+.product-info{
+  padding:15px;
+}
+
+.product-info h3{
+  font-size:16px;
+  margin-bottom:7px;
+}
+
+.desc{
   font-size:12px;
-  line-height:1.25;
-  margin:8px 0 4px;
-  min-height:30px;
+  color:#756a66;
+  min-height:31px;
 }
 
-.product-sub{
-  color:#746c68;
-  font-size:9px;
-  min-height:22px;
+.stars{
+  color:#e2a323;
+  margin:8px 0 3px;
+  font-size:13px;
 }
 
 .price{
-  font-size:15px;
   font-weight:bold;
-  margin-top:6px;
+  font-size:19px;
+  margin:6px 0;
 }
 
-.shipping{
-  color:#c16f62;
-  font-size:9px;
+.delivery{
+  color:#c97872;
+  font-size:12px;
   font-weight:bold;
-  margin:3px 0 8px;
 }
 
 .add{
   width:100%;
   border:0;
-  background:#392a26;
+  background:var(--brun);
   color:white;
-  padding:9px 5px;
-  border-radius:6px;
-  font-size:10px;
+  padding:12px;
+  border-radius:8px;
+  margin-top:12px;
+  cursor:pointer;
   font-weight:bold;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#392a26;
-  color:white;
-  padding:35px 20px;
-  text-align:center;
+.add:hover{
+  opacity:.88;
 }
 
-.footer-logo{
+/* FOOTER */
+
+footer{
+  background:#382824;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer h2{
   font-family:Georgia,serif;
-  font-size:23px;
-  letter-spacing:.18em;
+  letter-spacing:5px;
+  margin-bottom:10px;
 }
 
 footer p{
-  color:#d8ccc7;
-  font-size:11px;
-  line-height:1.7;
+  color:#eadbd5;
+  font-size:13px;
 }
 
-.footer-links{
-  margin-top:18px;
-}
+/* MOBILE */
 
-.footer-links a{
-  color:white;
-  font-size:10px;
-  margin:0 8px;
-}
-
-/* =========================
-   PANIER
-========================= */
-
-.cart-overlay{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.4);
-  z-index:1000;
-}
-
-.cart-overlay.open{
-  display:block;
-}
-
-.cart-panel{
-  position:absolute;
-  right:0;
-  top:0;
-  height:100%;
-  width:390px;
-  max-width:92%;
-  background:white;
-  padding:22px;
-  overflow:auto;
-}
-
-.cart-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #eee;
-  padding-bottom:15px;
-}
-
-.cart-head h2{
-  font-family:Georgia,serif;
-  margin:0;
-}
-
-.close{
-  border:0;
-  background:white;
-  font-size:28px;
-}
-
-.empty{
-  text-align:center;
-  color:#777;
-  padding:60px 10px;
-}
-
-.cart-item{
-  padding:15px 0;
-  border-bottom:1px solid #eee;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.cart-item strong{
-  font-size:12px;
-}
-
-.cart-item span{
-  font-size:12px;
-}
-
-.remove{
-  border:0;
-  background:white;
-  color:#a5574e;
-  font-size:10px;
-}
-
-.total{
-  display:flex;
-  justify-content:space-between;
-  font-weight:bold;
-  margin:20px 0;
-}
-
-.checkout{
-  width:100%;
-  border:0;
-  background:#392a26;
-  color:white;
-  border-radius:8px;
-  padding:14px;
-  font-weight:bold;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-  .topbar{
-    font-size:9px;
-  }
+@media(max-width:750px){
 
   .header-main{
-    flex-wrap:wrap;
-    padding:10px 12px;
-    gap:9px;
+    padding:18px 15px 12px;
   }
 
   .logo{
-    width:auto;
-    flex:1;
-    text-align:left;
+    font-size:28px;
+    letter-spacing:5px;
   }
 
-  .logo-title{
+  .cart{
+    padding:13px 17px;
+  }
+
+  .search-wrap{
+    padding:0 15px 15px;
+  }
+
+  .search-wrap input{
+    font-size:15px;
+    min-width:0;
+  }
+
+  .search-wrap button{
+    width:115px;
+  }
+
+  .nav-inner{
+    overflow-x:auto;
+    gap:28px;
+    padding:14px 15px;
+    white-space:nowrap;
+  }
+
+  .hero{
+    height:365px;
+  }
+
+  .hero-box{
+    width:78%;
+    padding:25px 15px;
+  }
+
+  .hero-box h1{
+    font-size:37px;
+    letter-spacing:6px;
+  }
+
+  .hero-box p{
+    font-size:19px;
+  }
+
+  .shop-info{
+    padding:18px 15px;
+  }
+
+  .shop-logo{
+    width:72px;
+    height:72px;
+  }
+
+  .shop-text h2{
     font-size:20px;
   }
 
-  .logo-sub{
-    font-size:6px;
-  }
-
-  .icon-btn{
+  .discover{
     display:none;
   }
 
-  .cart-btn{
-    font-size:12px;
-  }
-
-  .search{
-    order:3;
-    width:100%;
-    flex-basis:100%;
-    height:39px;
-  }
-
-  .search button{
-    padding:0 15px;
-    font-size:10px;
-  }
-
-  .brand-banner{
-    height:220px;
-  }
-
-  .brand-banner img{
-    object-position:center;
-  }
-
-  .banner-logo{
-    min-width:245px;
-    padding:14px 20px;
-  }
-
-  .banner-logo strong{
-    font-size:27px;
-  }
-
-  .banner-logo em{
-    font-size:13px;
-  }
-
-  .shop-profile{
-    padding:10px 12px;
-  }
-
-  .avatar{
-    width:58px;
-    height:58px;
-    min-width:58px;
-  }
-
-  .shop-info h1{
-    font-size:16px;
-  }
-
-  .follow{
-    font-size:10px;
-    padding:9px 12px;
-  }
-
-  .navigation-inner{
-    overflow-x:auto;
-    gap:25px;
-    padding:11px 12px;
-  }
-
-  .store{
+  .page{
     display:block;
-    padding:0 10px;
-    margin-top:10px;
+    padding:20px 15px 50px;
   }
 
   .sidebar{
     display:none;
   }
 
-  .promo-banner{
-    height:150px;
+  .collection-banner{
+    height:230px;
   }
 
-  .promo-text{
-    width:51%;
-    right:2%;
+  .collection-text{
+    width:58%;
   }
 
-  .promo-text h2{
-    font-size:18px;
-  }
-
-  .promo-text p{
-    display:none;
-  }
-
-  .categories{
-    grid-template-columns:repeat(3,1fr);
-    gap:7px;
-  }
-
-  .category-image{
-    height:90px;
-  }
-
-  .category-name{
-    font-size:9px;
+  .collection-text h2{
+    font-size:26px;
   }
 
   .products{
     grid-template-columns:repeat(2,1fr);
-    gap:14px 9px;
+    gap:12px;
   }
 
-  .product-photo{
-    height:210px;
+  .product-info{
+    padding:12px;
   }
 
-  .product h3{
-    font-size:12px;
+  .product-info h3{
+    font-size:14px;
   }
 
-  .add{
-    min-height:38px;
+  .price{
+    font-size:17px;
   }
 }
 
@@ -889,231 +625,184 @@ footer p{
 <body>
 
 <div class="topbar">
-LIVRAISON SOIGNÉE · UNIVERS ÉLYORA PARIS
+  LIVRAISON SOIGNÉE · UNIVERS ÉLYORA PARIS
 </div>
 
-<header class="header">
+<header>
 
   <div class="header-main">
 
     <div class="logo">
-      <div class="logo-title">ÉLYORA</div>
-      <div class="logo-sub">PARIS · HOME & SENSORY</div>
+      ÉLYORA
+      <small>PARIS · HOME & SENSORY</small>
     </div>
 
-    <div class="search">
-      <input id="searchInput"
-      placeholder="Rechercher dans la boutique...">
-      <button onclick="searchProducts()">Rechercher</button>
+    <div class="cart">
+      🛍️ Panier
+      <span class="cart-count" id="cartCount">0</span>
     </div>
 
-    <div class="header-actions">
-      <button class="icon-btn">♡</button>
+  </div>
 
-      <button class="cart-btn" onclick="openCart()">
-        Panier
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-    </div>
-
+  <div class="search-wrap">
+    <input
+      id="search"
+      type="text"
+      placeholder="Rechercher dans la boutique..."
+    >
+    <button onclick="searchProducts()">Rechercher</button>
   </div>
 
 </header>
 
-
-<!-- GRANDE BANNIERE -->
-
-<section class="brand-banner">
-
-<img
-src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png"
-alt="Collection de bougies ÉLYORA PARIS">
-
-<div class="banner-logo">
-  <strong>ÉLYORA</strong>
-  <span>PARIS · HOME & SENSORY</span>
-  <em>Des fragrances qui subliment votre quotidien</em>
-</div>
-
-</section>
-
-
-<!-- IDENTITE BOUTIQUE -->
-
-<section class="shop-profile">
-
-<div class="avatar">
-  <div>
-    ÉLYORA
-    <small>PARIS</small>
+<nav>
+  <div class="nav-inner">
+    <a href="#">Accueil</a>
+    <a href="#products">Objets en vente</a>
+    <a href="#about">À propos</a>
+    <a href="#collection">Collections</a>
+    <a href="#reviews">Évaluations</a>
   </div>
-</div>
-
-<div class="shop-info">
-  <h1>ÉLYORA PARIS</h1>
-  <p>Home & Sensory</p>
-  <p>Des fragrances qui subliment votre quotidien ✦</p>
-</div>
-
-<button class="follow"
-onclick="document.getElementById('products').scrollIntoView()">
-Découvrir
-</button>
-
-</section>
-
-
-<nav class="navigation">
-<div class="navigation-inner">
-
-<a href="#">Accueil</a>
-<a href="#products">Objets en vente</a>
-<a href="#about">À propos</a>
-<a href="#categories">Collections</a>
-
-</div>
 </nav>
 
 
-<div class="store">
+<!-- GRANDE PHOTO -->
 
+<section class="hero">
+
+  <img
+    src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png"
+    alt="Collection Élyora Paris"
+  >
+
+  <div class="hero-overlay">
+
+    <div class="hero-box">
+
+      <h1>ÉLYORA</h1>
+
+      <div class="paris">
+        PARIS · HOME & SENSORY
+      </div>
+
+      <p>
+        Des fragrances qui subliment<br>
+        votre quotidien
+      </p>
+
+      <a class="hero-btn" href="#products">
+        Découvrir la collection →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRESENTATION BOUTIQUE -->
+
+<section class="shop-info">
+
+  <div class="shop-logo">
+    <strong>ÉLYORA</strong>
+    <small>PARIS</small>
+  </div>
+
+  <div class="shop-text">
+
+    <h2>ÉLYORA PARIS</h2>
+
+    <p>
+      Home & Sensory<br>
+      Des fragrances qui subliment votre quotidien ✦
+    </p>
+
+  </div>
+
+  <a href="#products" class="discover">
+    Découvrir
+  </a>
+
+</section>
+
+
+<div class="page">
 
 <!-- COLONNE GAUCHE -->
 
 <aside class="sidebar">
 
-<h3>Catégories de la boutique</h3>
+  <h3>Catégories de la boutique</h3>
 
-<a href="#products">Tous les objets</a>
-<a href="#products">Nouveautés ✦</a>
-<a href="#products">Bougies parfumées</a>
-<a href="#products">Fleur de Coton</a>
-<a href="#products">Rose Poudrée</a>
-<a href="#products">Vanille & Ambre</a>
-<a href="#products">Musc Blanc</a>
-<a href="#products">Monoï</a>
+  <a href="#products">Tous les objets</a>
+  <a href="#products">Nouveautés ✨</a>
+  <a href="#products">Bougies parfumées</a>
+  <a href="#products">Diffuseurs de parfum</a>
+  <a href="#products">Décoration sensorielle</a>
+  <a href="#products">Coffrets cadeaux</a>
+  <a href="#products">Accessoires</a>
+  <a href="#products">Promotions</a>
 
-<div class="benefits">
+  <div class="features">
 
-<div class="benefit">
-  <div class="benefit-icon">✓</div>
-  <div>
-    <strong>Expédition soignée</strong>
-    <span>Préparation avec attention</span>
+    <div class="feature">
+      🚚
+      <strong>Expédition rapide</strong>
+      Suivi inclus
+    </div>
+
+    <div class="feature">
+      ♡
+      <strong>Produits de qualité</strong>
+      Sélectionnés avec soin
+    </div>
+
+    <div class="feature">
+      ✨
+      <strong>Ambiance & bien-être</strong>
+      Pour un intérieur unique
+    </div>
+
+    <div class="feature">
+      🎁
+      <strong>Emballage soigné</strong>
+      Idéal pour offrir
+    </div>
+
   </div>
-</div>
-
-<div class="benefit">
-  <div class="benefit-icon">◇</div>
-  <div>
-    <strong>Produits sélectionnés</strong>
-    <span>Univers Élyora Paris</span>
-  </div>
-</div>
-
-<div class="benefit">
-  <div class="benefit-icon">♡</div>
-  <div>
-    <strong>Ambiance & bien-être</strong>
-    <span>Pour un intérieur unique</span>
-  </div>
-</div>
-
-<div class="benefit">
-  <div class="benefit-icon">✦</div>
-  <div>
-    <strong>Emballage soigné</strong>
-    <span>Idéal pour offrir</span>
-  </div>
-</div>
-
-</div>
 
 </aside>
 
 
-<!-- PARTIE PRINCIPALE -->
+<main>
 
-<main class="content">
+<!-- BANNIERE -->
 
+<section class="collection-banner" id="collection">
 
-<!-- BANNIERE INTERIEURE -->
+  <img
+    src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png"
+    alt="Collection Élyora Paris"
+  >
 
-<section class="promo-banner">
+  <div class="collection-text">
 
-<img
-src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png"
-alt="Bougies parfumées ÉLYORA PARIS">
+    <small>
+      ÉLYORA PARIS · HOME & SENSORY
+    </small>
 
-<div class="promo-overlay"></div>
+    <h2>
+      Créez une ambiance<br>
+      qui vous ressemble
+    </h2>
 
-<div class="promo-text">
+    <a href="#products">
+      Découvrir la collection →
+    </a>
 
-<small>ÉLYORA PARIS · HOME & SENSORY</small>
-
-<h2>
-Créez une ambiance<br>
-qui vous ressemble
-</h2>
-
-<p>BOUGIES PARFUMÉES · COLLECTION ÉLYORA</p>
-
-<button onclick="document.getElementById('products').scrollIntoView()">
-Découvrir la collection →
-</button>
-
-</div>
-
-</section>
-
-
-<!-- CATEGORIES -->
-
-<section id="categories">
-
-<div class="section-title">
-<h2>Nos catégories</h2>
-<a href="#products">Tout afficher →</a>
-</div>
-
-<div class="categories">
-
-<div class="category" onclick="goProducts()">
-<div class="category-image cat1">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-</div>
-<div class="category-name">Rose Poudrée</div>
-</div>
-
-<div class="category" onclick="goProducts()">
-<div class="category-image cat2">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-</div>
-<div class="category-name">Vanille & Ambre</div>
-</div>
-
-<div class="category" onclick="goProducts()">
-<div class="category-image cat3">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-</div>
-<div class="category-name">Fleur de Coton</div>
-</div>
-
-<div class="category" onclick="goProducts()">
-<div class="category-image cat4">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-</div>
-<div class="category-name">Musc Blanc</div>
-</div>
-
-<div class="category" onclick="goProducts()">
-<div class="category-image cat5">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-</div>
-<div class="category-name">Monoï</div>
-</div>
-
-</div>
+  </div>
 
 </section>
 
@@ -1122,145 +811,298 @@ Découvrir la collection →
 
 <section id="products">
 
-<div class="section-title" style="margin-top:25px">
-<h2>Objets en vente</h2>
-<a href="#products">Tout afficher →</a>
+<div class="section-title">
+
+  <h2>Nos créations</h2>
+
+  <a href="#products">
+    Tout afficher →
+  </a>
+
 </div>
+
 
 <div class="products">
 
 
-<!-- ROSE -->
+<!-- FLEUR DE COTON -->
 
-<article class="product" data-name="rose poudrée">
+<article class="product" data-name="fleur de coton">
 
-<div class="product-photo p1">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-<button class="heart">♡</button>
-</div>
+  <div class="product-image">
 
-<h3>Bougie parfumée Rose Poudrée</h3>
+    <img
+      src="D159FE9E-CC86-4EE2-BE3C-79952D13131E.png"
+      alt="Bougie Fleur de Coton Élyora Paris"
+    >
 
-<div class="product-sub">
-ÉLYORA PARIS · Cire végétale
-</div>
+    <span class="heart">♡</span>
 
-<div class="price">16,90 €</div>
+  </div>
 
-<div class="shipping">Livraison disponible</div>
+  <div class="product-info">
 
-<button class="add"
-onclick="addToCart('Bougie Rose Poudrée',16.90)">
-Ajouter au panier
-</button>
+    <h3>Bougie Fleur de Coton</h3>
+
+    <div class="desc">
+      Douce · propre · délicatement fleurie
+    </div>
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <div class="price">
+      16,90 €
+    </div>
+
+    <div class="delivery">
+      Livraison offerte
+    </div>
+
+    <button
+      class="add"
+      onclick="addToCart('Fleur de Coton')"
+    >
+      Ajouter au panier
+    </button>
+
+  </div>
 
 </article>
 
 
-<!-- VANILLE -->
+<!-- VANILLE AMBRE -->
 
 <article class="product" data-name="vanille ambre">
 
-<div class="product-photo p2">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-<button class="heart">♡</button>
-</div>
+  <div class="product-image">
 
-<h3>Bougie parfumée Vanille & Ambre</h3>
+    <img
+      src="CBF58951-6CE9-4553-9B0B-CD4615EC26EB.png"
+      alt="Bougie Vanille et Ambre Élyora Paris"
+    >
 
-<div class="product-sub">
-ÉLYORA PARIS · Cire végétale
-</div>
+    <span class="heart">♡</span>
 
-<div class="price">18,90 €</div>
+  </div>
 
-<div class="shipping">Livraison disponible</div>
+  <div class="product-info">
 
-<button class="add"
-onclick="addToCart('Bougie Vanille & Ambre',18.90)">
-Ajouter au panier
-</button>
+    <h3>Vanille & Ambre</h3>
 
-</article>
+    <div class="desc">
+      Chaleureuse · gourmande · enveloppante
+    </div>
 
+    <div class="stars">
+      ★★★★★
+    </div>
 
-<!-- COTON -->
+    <div class="price">
+      18,90 €
+    </div>
 
-<article class="product" data-name="fleur coton">
+    <div class="delivery">
+      Livraison offerte
+    </div>
 
-<div class="product-photo p3">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-<button class="heart">♡</button>
-</div>
+    <button
+      class="add"
+      onclick="addToCart('Vanille & Ambre')"
+    >
+      Ajouter au panier
+    </button>
 
-<h3>Bougie parfumée Fleur de Coton</h3>
-
-<div class="product-sub">
-ÉLYORA PARIS · Cire végétale
-</div>
-
-<div class="price">16,90 €</div>
-
-<div class="shipping">Livraison disponible</div>
-
-<button class="add"
-onclick="addToCart('Bougie Fleur de Coton',16.90)">
-Ajouter au panier
-</button>
+  </div>
 
 </article>
 
 
-<!-- MUSC -->
+<!-- FLEUR DECORATIVE -->
 
-<article class="product" data-name="musc blanc">
+<article class="product" data-name="fleur décorative">
 
-<div class="product-photo p4">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-<button class="heart">♡</button>
-</div>
+  <div class="product-image">
 
-<h3>Bougie parfumée Musc Blanc</h3>
+    <img
+      src="AF691EAA-DD36-40D1-AAE9-DD8DEEF1975E.png"
+      alt="Bougie Fleur Décorative Élyora Paris"
+    >
 
-<div class="product-sub">
-ÉLYORA PARIS · Cire végétale
-</div>
+    <span class="heart">♡</span>
 
-<div class="price">17,90 €</div>
+  </div>
 
-<div class="shipping">Livraison disponible</div>
+  <div class="product-info">
 
-<button class="add"
-onclick="addToCart('Bougie Musc Blanc',17.90)">
-Ajouter au panier
-</button>
+    <h3>Fleur Décorative</h3>
+
+    <div class="desc">
+      Bougie sculpturale · élégante · florale
+    </div>
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <div class="price">
+      19,90 €
+    </div>
+
+    <div class="delivery">
+      Livraison offerte
+    </div>
+
+    <button
+      class="add"
+      onclick="addToCart('Fleur Décorative')"
+    >
+      Ajouter au panier
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- ROSE POUDREE -->
+
+<article class="product" data-name="rose poudrée">
+
+  <div class="product-image">
+
+    <img
+      src="5EB0360B-C45A-491C-A487-4B245F5FD57B.png"
+      alt="Bougie Rose Poudrée Élyora Paris"
+    >
+
+    <span class="heart">♡</span>
+
+  </div>
+
+  <div class="product-info">
+
+    <h3>Rose Poudrée</h3>
+
+    <div class="desc">
+      Florale · romantique · délicate
+    </div>
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <div class="price">
+      16,90 €
+    </div>
+
+    <div class="delivery">
+      Livraison offerte
+    </div>
+
+    <button
+      class="add"
+      onclick="addToCart('Rose Poudrée')"
+    >
+      Ajouter au panier
+    </button>
+
+  </div>
 
 </article>
 
 
 <!-- MONOI -->
 
-<article class="product" data-name="monoi">
+<article class="product" data-name="monoï">
 
-<div class="product-photo p5">
-<img src="E65060F9-65AF-40BD-8B5F-F65AF86A4B30.png">
-<button class="heart">♡</button>
-</div>
+  <div class="product-image">
 
-<h3>Bougie parfumée Monoï</h3>
+    <img
+      src="3F360E75-F71E-466F-BEC4-AA67A1253E7B.png"
+      alt="Bougie Monoï Élyora Paris"
+    >
 
-<div class="product-sub">
-ÉLYORA PARIS · Cire végétale
-</div>
+    <span class="heart">♡</span>
 
-<div class="price">15,90 €</div>
+  </div>
 
-<div class="shipping">Livraison disponible</div>
+  <div class="product-info">
 
-<button class="add"
-onclick="addToCart('Bougie Monoï',15.90)">
-Ajouter au panier
-</button>
+    <h3>Bougie Cube Monoï</h3>
+
+    <div class="desc">
+      Solaire · exotique · forme tendance
+    </div>
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <div class="price">
+      14,90 €
+    </div>
+
+    <div class="delivery">
+      Livraison offerte
+    </div>
+
+    <button
+      class="add"
+      onclick="addToCart('Bougie Cube Monoï')"
+    >
+      Ajouter au panier
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- DIFFUSEUR -->
+
+<article class="product" data-name="diffuseur fleur de cerisier">
+
+  <div class="product-image">
+
+    <img
+      src="07393B54-6067-4DB5-9E10-AF17EAF1021E.png"
+      alt="Diffuseur Fleur de Cerisier Élyora Paris"
+    >
+
+    <span class="heart">♡</span>
+
+  </div>
+
+  <div class="product-info">
+
+    <h3>Diffuseur Fleur de Cerisier</h3>
+
+    <div class="desc">
+      Floral · frais · parfum d'intérieur
+    </div>
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <div class="price">
+      18,90 €
+    </div>
+
+    <div class="delivery">
+      Livraison offerte
+    </div>
+
+    <button
+      class="add"
+      onclick="addToCart('Diffuseur Fleur de Cerisier')"
+    >
+      Ajouter au panier
+    </button>
+
+  </div>
 
 </article>
 
@@ -1268,191 +1110,136 @@ Ajouter au panier
 </div>
 </section>
 
+
+<!-- A PROPOS -->
+
+<section
+  id="about"
+  style="
+    margin-top:55px;
+    padding:35px;
+    background:#fbf2ee;
+    border-radius:18px;
+    text-align:center;
+  "
+>
+
+  <h2
+    style="
+      font-family:Georgia,serif;
+      font-size:30px;
+      margin-bottom:15px;
+    "
+  >
+    L'univers Élyora Paris
+  </h2>
+
+  <p
+    style="
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+      color:#6d5e59;
+    "
+  >
+    Des bougies et parfums d'intérieur imaginés
+    pour créer une atmosphère élégante,
+    chaleureuse et raffinée dans votre maison.
+  </p>
+
+</section>
+
+
 </main>
-
 </div>
 
 
-<footer id="about">
+<footer>
 
-<div class="footer-logo">ÉLYORA PARIS</div>
+  <h2>ÉLYORA PARIS</h2>
 
-<p>
-HOME & SENSORY<br>
-Des fragrances qui subliment votre quotidien.
-</p>
-
-<div class="footer-links">
-<a href="#">Mentions légales</a>
-<a href="#">CGV</a>
-<a href="#">Confidentialité</a>
-<a href="#">Contact</a>
-</div>
+  <p>
+    HOME & SENSORY · Des fragrances qui subliment votre quotidien
+  </p>
 
 </footer>
 
 
-<!-- PANIER -->
-
-<div class="cart-overlay" id="cartOverlay">
-
-<div class="cart-panel">
-
-<div class="cart-head">
-<h2>Votre panier</h2>
-<button class="close" onclick="closeCart()">×</button>
-</div>
-
-<div id="cartItems">
-
-<div class="empty">
-Votre panier est vide.
-</div>
-
-</div>
-
-<div id="cartBottom" style="display:none">
-
-<div class="total">
-<span>Total</span>
-<span id="cartTotal">0,00 €</span>
-</div>
-
-<button class="checkout" onclick="checkout()">
-Commander →
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
 <script>
 
-let cart=[];
+let cart = 0;
 
-function goProducts(){
- document.getElementById("products").scrollIntoView();
+function addToCart(product){
+
+  cart++;
+
+  document.getElementById("cartCount").textContent = cart;
+
+  alert(
+    product +
+    " a été ajouté à votre panier 🛍️"
+  );
 }
 
-function addToCart(name,price){
-
- cart.push({name,price});
-
- updateCart();
-
- openCart();
-}
-
-function updateCart(){
-
- const items=document.getElementById("cartItems");
- const count=document.getElementById("cartCount");
- const bottom=document.getElementById("cartBottom");
-
- count.textContent=cart.length;
-
- if(cart.length===0){
-
-  items.innerHTML='<div class="empty">Votre panier est vide.</div>';
-
-  bottom.style.display="none";
-
-  return;
- }
-
- bottom.style.display="block";
-
- let html="";
- let total=0;
-
- cart.forEach((item,index)=>{
-
-  total+=item.price;
-
-  html+=`
-  <div class="cart-item">
-
-   <div>
-    <strong>${item.name}</strong><br>
-    <span>${item.price.toFixed(2).replace(".",",")} €</span>
-   </div>
-
-   <button
-   class="remove"
-   onclick="removeItem(${index})">
-   Supprimer
-   </button>
-
-  </div>
-  `;
-
- });
-
- items.innerHTML=html;
-
- document.getElementById("cartTotal").textContent=
- total.toFixed(2).replace(".",",")+" €";
-}
-
-function removeItem(index){
-
- cart.splice(index,1);
-
- updateCart();
-}
-
-function openCart(){
-
- document.getElementById("cartOverlay")
- .classList.add("open");
-}
-
-function closeCart(){
-
- document.getElementById("cartOverlay")
- .classList.remove("open");
-}
-
-document.getElementById("cartOverlay")
-.addEventListener("click",function(event){
-
- if(event.target===this){
-  closeCart();
- }
-
-});
 
 function searchProducts(){
 
- const search=
- document.getElementById("searchInput")
- .value
- .toLowerCase()
- .trim();
+  const search =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
 
- document.querySelectorAll(".product")
- .forEach(product=>{
+  const products =
+    document.querySelectorAll(".product");
 
-  const name=product.dataset.name;
+  products.forEach(product => {
 
-  product.style.display=
-  name.includes(search) ? "block" : "none";
+    const name =
+      product.dataset.name.toLowerCase();
 
- });
+    if(
+      search === "" ||
+      name.includes(search)
+    ){
+      product.style.display = "block";
+    }
+    else{
+      product.style.display = "none";
+    }
 
- document.getElementById("products").scrollIntoView();
+  });
+
+  document
+  .getElementById("products")
+  .scrollIntoView({
+    behavior:"smooth"
+  });
+
 }
 
-function checkout(){
 
- alert(
- "Le panier ÉLYORA fonctionne. Le paiement sécurisé sera connecté à l'étape suivante."
- );
+/* COEURS */
 
-}
+document
+.querySelectorAll(".heart")
+.forEach(heart => {
+
+  heart.addEventListener("click", function(){
+
+    if(this.textContent === "♡"){
+      this.textContent = "♥";
+      this.style.color = "#c77f7b";
+    }
+    else{
+      this.textContent = "♡";
+      this.style.color = "#2d2421";
+    }
+
+  });
+
+});
 
 </script>
 
